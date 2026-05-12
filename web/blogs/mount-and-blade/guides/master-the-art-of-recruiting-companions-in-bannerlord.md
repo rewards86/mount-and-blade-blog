@@ -1,0 +1,60 @@
+# Master the Art of Recruiting Companions in Bannerlord
+
+In Mount and Blade: Bannerlord, players must assemble a powerful army to defeat the game's many factions. In addition to the usual troops that may be enlisted, players can also acquire companions. These companions are distinct non-player characters that, like the player character, may assist in combat and provide additional support. They are not only a formidable opponent in battle, but they also bring vital advantages to the players' group and kingdom.
+
+[![](images/Master%20the%20Art%20of%20Recruiting%20Companions%20in%20Bannerlord.jpg)](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjoFH6egLERUlbQ3OSwYyBnLDBcA1jEg3MbYC1r90OSnK0Sm__Xmp9x09jDJ2tHx-gU6dNCimU7MoVoqHyKELR5xNQ6ddMyZzuATvluyuDS2L0xcDsPWUJdT2eBQf4Ebv_IRbc8PaUOX1m6nMbBupv-QgowXBALXx6Zs3s1scRGAXKRgvM3Ly6wM7ME3w/s320/Master%20the%20Art%20of%20Recruiting%20Companions%20in%20Bannerlord.jpg)
+To acquire companions in Bannerlord, players must first earn a reputation and influence in the game world by completing tasks and developing relationships with various NPC lords and ladies. Once players have achieved enough influence and reputation, they will be able to select partners.
+
+It's crucial to understand that not all companion are created equal and that various companions thrive in different areas. Some may be good archers, while others may be competent in melee fighting. Others may have special skills, such as diplomacy or trading. As a result, while recruiting partners, keep your playstyle and army composition in mind.
+
+To effectively recruit companions, players must first establish their reputation and influence inside the game world. When determining who to recruit and add to your army in Calradia, it's also crucial to evaluate each companion's individual skills and talents. Players will be able to recruit the most effective companion and have a formidable army in their mission to conquer Calradia with the help of this guide and a smart strategy.
+
+## How to Locate and Recruit Companions
+
+The fundamental prerequisite for acquiring partners in the game is a significant quantity of gold. Each companion has a cost that changes depending on their starting skill levels. Companions with high skill levels, specialties, or distinctive features, for example, are often more expensive than others. Players may find and acquire partners by going to any large town on the map and going to the local pub. Once entering, players may choose "Go to the tavern district," which will bring up a list of wanderers in the area. These wanderers may be located on the right side of the screen in the designated slots.
+
+When you choose a companion, you may view their stats, abilities, traits, and history. This will give you an indication of what talents you may anticipate from that companion and what role they will play in your group. In the depiction above, for example, Fercread Cowthief is the sole wanderer accessible at Pen Cannoc. You may also sort the companions by profession, faction, background, and other characteristics.
+
+When a prospective companion is identified, players can commence communication and attempt to attract them. Keep in mind, though, that some of your comrades may be loyal to other lords or have other reasons not to join your team. Some companions may also need you to complete a task or improve your reputation with a faction before they would agree to join you. Once recruited, a companion is usually devoted to the player and will take part in combat and activities as commanded by the player.
+
+## A Companion's Recruitment
+
+To find a partner, gamers must first begin conversation with the chosen character. This is done by left-clicking on their portrait and selecting "Talk" from the menu. This will take the player immediately to their spot within the bar, where they may discover more about the character's background, talents, attributes, and other information. Players can optionally skip this information by selecting "I'm... Let's skip the niceties and get down to work." By selecting this option, the character will reveal the cost of recruiting them in denars, as well as any other prerequisites they must meet before joining your group.
+
+It is crucial to note that not all companions are always available for rent. Some partners may emerge exclusively in particular places or under certain situations. Furthermore, certain companions may have special prerequisites that must be completed before they would join your party, such as finishing a mission or building your reputation with a faction.
+
+The character will join the player's group after the sum has been agreed upon. They are regarded as exceptional characters above and beyond conventional soldiers since they have unique talents and equipment that can be fully tailored to the player's liking, with the option to equip, train, and assign their varied duties. They can also give various boosts to the player's group in battle and during traveling. Companions can also supply useful information and guidance during the game, making them an important addition to the player's party. Congratulations! The first companion has been successfully recruited by the players. 
+
+## What are the ideal companions to recruit?
+
+When it comes to companions in Bannerlord, each one is unique and is produced at random for each save. The companion NPC's first name is randomized, while their second name provides information about their background and talents. Players can use their second name to identify the best skilled companion of a specific class. Companions with the suffix "Healer" or "Surgeon," for example, often have high Medicine skill levels and are important additions to a party. Companions with suffixes like "Captain" or "Knight" are also more skilled in leadership and warfare, making them excellent candidates for battle-focused gaming.
+
+The Mount and Blade Wiki has a thorough list of companion names and their accompanying qualities. This guide helps players to filter by skill level and obtain a better grasp of each companion NPC's distinct qualities and abilities. Furthermore, the greatest characters for several popular classes, such as combat-oriented companions or commerce-focused companions, may be broken down. However, it is vital to remember that the perfect companion for you is determined by your gaming style, faction, Warband type, and a variety of other criteria.
+
+When recruiting companions, players should consider their own particular preferences and aims. You may select a companion who is skilled in one-on-one combat if you want to lead charges and fight on the front lines or a partner who is skilled at trade and negotiation if you intend to develop a great trading empire. Furthermore, players should evaluate their companion's traits, looks, and background, since these might affect their companion's conduct, loyalty, and relationships with other companions and NPCs.
+
+## Best Companion for both Scouts and Archers
+
+You get two for one with the "Of the Wastes" companion. This one is an excellent pick for those looking for a highly competent archer and scout companion in Bannerlord. This NPC excels in archery, with an excellent start skill point allocation of 185, placing them among the most talented partners in this field of battle. With their strong bullets, they can quickly dispatch opposing soldiers, making them a dangerous weapon in combat. Additionally, outfitting them with light armor will improve their fighting performance.
+
+They also have a notable aptitude in scouting, with a starting skill point allocation of 185, making them extremely useful in reconnaissance and intelligence collection. They can detect and track adversaries, giving useful information on enemy movements, numbers, and locations. As a result, they are an indispensable partner for gamers who value stealth and strategy in their games.
+
+This companion is among the most talented in archery and reconnaissance, making them an invaluable asset to any player's army. They also have well-rounded stats like endurance and strength, which allows them to fight for lengthy periods of time and execute devastating shots. They are certainly worth considering while seeking party partners. They are also an excellent choice for gamers looking for a versatile partner that can thrive in both ranged and reconnaissance duties.
+
+## Ideal Two-Handed Companions
+
+Bannerlord, Coalbiter, and The Swordsman are excellent selections for those looking for a highly proficient berserker companion in Mount and Blade. With an amazing beginning skill point allotment of 200, these NPCs are among the most proficient partners in this specific field of warfare. They also have a notable competence in Polearm fighting, with a starting skill point allocation of 170. This mix of talents allows them to be incredibly adaptable in battle and adapt to a variety of combat circumstances. These allies are also among the most adept in polearm fighting, making them a great asset to any player's army. They also have well-rounded stat points, such as strong endurance and strength, which allows them to fight for lengthy periods of time and execute devastating attacks. They are certainly worth considering while seeking a party companion.
+
+## Ideal Blacksmith Companion
+
+In Bannerlord, the companion with the suffix "the Smith" is an excellent choice for those looking for a highly talented blacksmith partner. This NPC excels in blacksmithing, with an excellent start skill point allocation of 60, placing them among the most talented companions in this field of handicraft. Blacksmithing is an important ability in the game since it allows players to create weapons that may be used in combat or sold for a profit. Having a companion with excellent blacksmithing talent can considerably improve the player's ability to make weapons and earn denars.
+
+This companion is among the most adept in blacksmithing, making them an invaluable asset to any player's group. They can meet the desires of the player for bespoke weaponry, whether for war or profit. It is also wise to consider their bonuses, since certain companions may have other talents that can supplement the blacksmithing skill and aid the player in their trip. Overall, the Smith companion is an excellent choice for those that value blacksmithing and wish to improve their effectiveness in this area of the game.
+
+## The Perfect Medical Companion
+
+The best medically qualified companions you may employ in a game are those who have the suffixes "Healer" or "Surgeon." These companions are the best options for healing because they have an initial Medicine skill of 80. It is vital to remember that as the game advances, the Medicine skill may be improved by a variety of methods, including training, literature, and equipment. These partners may also be skilled in other areas, such as Surgery and First Aid, which might help them heal more effectively.
+
+Having a proficient medical companion from the start of the game may substantially aid one's group by lowering the risk of losses during battle, and the added benefits of passive healing can prove vital in longer confrontations. A competent healer can give medical treatment to the injured, enhancing their chances of survival while also boosting unit morale. It also spares the player from having to control the health of their warriors and the need to refill on medicine along the voyage.
+
+Having a professional healer or surgeon as a companion may be quite beneficial in a variety of gameplay scenarios like battles, sieges, and open-world activities. Furthermore, a good healer is useful in the game's diplomatic and commerce aspects since they may give medical services to towns and lords, building ties and earning more money.
