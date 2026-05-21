@@ -4,41 +4,43 @@
   weight = 10
 
 [[main]]
+  identifier = "bannerlord"
   name = "Bannerlord"
   weight = 20
 
 [[main]]
   name = "Guides"
-  parent = "Bannerlord"
-  pageRef = "tags/bannerlord-guide"
+  parent = "bannerlord"
+  pageRef = "tags/guide"
   weight = 10
 
 [[main]]
   name = "Mods"
-  parent = "Bannerlord"
-  pageRef = "tags/bannerlord-mods"
+  parent = "bannerlord"
+  pageRef = "tags/mods"
   weight = 20
 
 [[main]]
   name = "Support"
-  parent = "Bannerlord"
+  parent = "bannerlord"
   pageRef = "tags/technical-support"
   weight = 30
 
 [[main]]
+  identifier = "warband"
   name = "Warband"
   weight = 30
 
 [[main]]
   name = "Guides"
-  parent = "Warband"
-  pageRef = "tags/warband-guide"
+  parent = "warband"
+  pageRef = "tags/guide"
   weight = 10
 
 [[main]]
   name = "Mods"
-  parent = "Warband"
-  pageRef = "tags/warband-mods"
+  parent = "warband"
+  pageRef = "tags/mods"
   weight = 20
 
 [[main]]
