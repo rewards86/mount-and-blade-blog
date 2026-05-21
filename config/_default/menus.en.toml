@@ -2,6 +2,7 @@
   identifier = "bannerlord"
   name = "Bannerlord"
   pre = "fa-flag"
+  pageRef = "tags/bannerlord"
   weight = 10
 
 [[main]]
@@ -36,27 +37,32 @@
   identifier = "warband"
   name = "Warband"
   pre = "fa-gavel"
+  pageRef = "tags/bannerlord"
   weight = 20
 
 [[main]]
+  identifier = "warband-mods"
   name = "Mods"
   parent = "warband"
   pageRef = "tags/mods"
   weight = 10
 
 [[main]]
+  identifier = "warband-guides"
   name = "Guides"
   parent = "warband"
   pageRef = "tags/guide"
   weight = 20
 
 [[main]]
+  identifier = "warband-help"
   name = "Help"
   parent = "warband"
   pageRef = "tags/bannerlord-help"
   weight = 30
 
 [[main]]
+  identifier = "warband-support"
   name = "Technical Support"
   parent = "warband"
   pageRef = "tags/technical-support"
@@ -66,39 +72,46 @@
   identifier = "mods"
   name = "Mods"
   pre = "fa-wrench"
+  pageRef = "tags/mods"
   weight = 30
 
 [[main]]
+  identifier = "mods-mylittlewarband"
   name = "My Little Warband"
   parent = "mods"
   pageRef = "posts/bannerlord-my-little-warband-mod-for"
   weight = 10
 
 [[main]]
-  name = "Rome Inventions"
+  identifier = "mods-bannerlordmods"
+  name = "Bannerlord Mods"
   parent = "mods"
-  pageRef = "tags/inventions"
+  pageRef = "tags/bannerlord-mods"
   weight = 20
 
 [[main]]
-  name = "Egypt Inventions"
+  identifier = "mods-modhelp"
+  name = "Mod Help"
   parent = "mods"
-  pageRef = "tags/inventions"
+  pageRef = "tags/mod-help"
   weight = 30
 
 [[main]]
-  name = "18th Century Inventions"
+  identifier = "mods-allmods"
+  name = "All Mods"
   parent = "mods"
-  pageRef = "tags/inventions"
+  pageRef = "tags/mods"
   weight = 40
 
 [[main]]
+  identifier = "contact"
   name = "Contact US"
   pre = "fa-envelope"
   pageRef = "contact"
   weight = 40
 
 [[main]]
+  identifier = "about"
   name = "About"
   pre = "fa-info-circle"
   pageRef = "about"
