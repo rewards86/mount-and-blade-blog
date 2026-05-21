@@ -1,4 +1,4 @@
-colorScheme = "blowfish"
+colorScheme = "mountblade"
 defaultAppearance = "light"
 autoSwitchAppearance = true
 
@@ -23,23 +23,23 @@ smartTOCHideUnfocusedChildren = false
 fingerprintAlgorithm = "sha512"
 
 [header]
-  layout = "fixed"
+  layout = "basic"
 
 [footer]
   showMenu = true
   showCopyright = true
-  showThemeAttribution = true
+  showThemeAttribution = false
   showAppearanceSwitcher = true
   showScrollToTop = true
 
 [homepage]
-  layout = "custom"
+  layout = "profile"
   showRecent = true
   showRecentItems = 15
   showMoreLink = false
   cardView = true
   cardViewScreenWidth = false
-  layoutBackgroundBlur = true
+  layoutBackgroundBlur = false
 
 [article]
   showDate = true
@@ -51,20 +51,20 @@ fingerprintAlgorithm = "sha512"
   showHero = false
   heroStyle = "basic"
   showBreadcrumbs = true
-  showDraftLabel = true
+  showDraftLabel = false
   showEdit = false
   seriesOpened = false
   showHeadingAnchors = true
   showPagination = true
   invertPagination = false
   showReadingTime = true
-  showTableOfContents = true
+  showTableOfContents = false
   showRelatedContent = true
-  relatedContentLimit = 5
+  relatedContentLimit = 3
   showTaxonomies = true
-  showAuthorsBadges = true
+  showAuthorsBadges = false
   showWordCount = false
-  sharingLinks = ["twitter", "reddit", "facebook", "email"]
+  sharingLinks = ["facebook", "twitter", "reddit", "email"]
   showZenMode = false
 
 [list]
