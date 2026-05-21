@@ -1,0 +1,44 @@
+[
+  {
+    "id": "pages/contact-us.md",
+    "category": "pages",
+    "title": "Contact US ",
+    "description": "Thank you for stopping by our Mount and Blade blog! We'd love to hear from you if you have any questions, comments, or recommendations. Please feel fr...",
+    "date": "2023-01-10",
+    "tags": [
+      "pages"
+    ],
+    "readTime": "1 min",
+    "file": "pages/contact-us.md",
+    "blog": "mount-and-blade",
+    "blogLabel": "Mount And Blade Blog"
+  },
+  {
+    "id": "pages/about-us.md",
+    "category": "pages",
+    "title": "About Us",
+    "description": "Hi! My name is Eric, and I'm a Mount & Blade junkie! I adore this game series; I've been playing it for years and have accumulated a wealth of knowled...",
+    "date": "2023-01-10",
+    "tags": [
+      "pages"
+    ],
+    "readTime": "1 min",
+    "file": "pages/about-us.md",
+    "blog": "mount-and-blade",
+    "blogLabel": "Mount And Blade Blog"
+  },
+  {
+    "id": "pages/privacy-policy.md",
+    "category": "pages",
+    "title": "Privacy Policy",
+    "description": "**\u00a0Mount And Blade Game Privacy Policy**\n\nThis Privacy Policy explains how we collect, use, and share personal information when you visit https://www....",
+    "date": "2023-01-10",
+    "tags": [
+      "pages"
+    ],
+    "readTime": "2 min",
+    "file": "pages/privacy-policy.md",
+    "blog": "mount-and-blade",
+    "blogLabel": "Mount And Blade Blog"
+  }
+]
