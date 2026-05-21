@@ -1,62 +1,108 @@
 [[main]]
-  name = "Home"
-  pageRef = "/"
-  weight = 10
-
-[[main]]
   identifier = "bannerlord"
   name = "Bannerlord"
-  weight = 20
-
-[[main]]
-  name = "Guides"
-  parent = "bannerlord"
-  pageRef = "tags/guide"
+  pre = "fa-flag"
   weight = 10
 
 [[main]]
+  identifier = "bannerlord-mods"
   name = "Mods"
   parent = "bannerlord"
   pageRef = "tags/mods"
+  weight = 10
+
+[[main]]
+  identifier = "bannerlord-guides"
+  name = "Guides"
+  parent = "bannerlord"
+  pageRef = "tags/guide"
   weight = 20
 
 [[main]]
-  name = "Support"
+  identifier = "bannerlord-help"
+  name = "Help"
+  parent = "bannerlord"
+  pageRef = "tags/bannerlord-help"
+  weight = 30
+
+[[main]]
+  identifier = "bannerlord-support"
+  name = "Technical Support"
   parent = "bannerlord"
   pageRef = "tags/technical-support"
-  weight = 30
+  weight = 40
 
 [[main]]
   identifier = "warband"
   name = "Warband"
-  weight = 30
-
-[[main]]
-  name = "Guides"
-  parent = "warband"
-  pageRef = "tags/guide"
-  weight = 10
+  pre = "fa-gavel"
+  weight = 20
 
 [[main]]
   name = "Mods"
   parent = "warband"
   pageRef = "tags/mods"
+  weight = 10
+
+[[main]]
+  name = "Guides"
+  parent = "warband"
+  pageRef = "tags/guide"
   weight = 20
 
 [[main]]
-  name = "About"
-  pageRef = "about"
+  name = "Help"
+  parent = "warband"
+  pageRef = "tags/bannerlord-help"
+  weight = 30
+
+[[main]]
+  name = "Technical Support"
+  parent = "warband"
+  pageRef = "tags/technical-support"
   weight = 40
 
 [[main]]
-  name = "Contact"
-  pageRef = "contact"
-  weight = 50
+  identifier = "mods"
+  name = "Mods"
+  pre = "fa-wrench"
+  weight = 30
 
 [[main]]
-  name = "Privacy Policy"
-  pageRef = "privacy-policy"
-  weight = 60
+  name = "My Little Warband"
+  parent = "mods"
+  pageRef = "posts/bannerlord-my-little-warband-mod-for"
+  weight = 10
+
+[[main]]
+  name = "Rome Inventions"
+  parent = "mods"
+  pageRef = "tags/inventions"
+  weight = 20
+
+[[main]]
+  name = "Egypt Inventions"
+  parent = "mods"
+  pageRef = "tags/inventions"
+  weight = 30
+
+[[main]]
+  name = "18th Century Inventions"
+  parent = "mods"
+  pageRef = "tags/inventions"
+  weight = 40
+
+[[main]]
+  name = "Contact US"
+  pre = "fa-envelope"
+  pageRef = "contact"
+  weight = 40
+
+[[main]]
+  name = "About"
+  pre = "fa-info-circle"
+  pageRef = "about"
+  weight = 50
 
 [[footer]]
   name = "About"
