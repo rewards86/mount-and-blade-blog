@@ -1,0 +1,55 @@
+theme = "blowfish"
+baseURL = "https://www.mountandbladegame.com/"
+defaultContentLanguage = "en"
+title = "Mount and Blade Game"
+
+enableRobotsTXT = true
+summaryLength = 30
+buildDrafts = false
+buildFuture = false
+enableEmoji = true
+
+[pagination]
+  pagerSize = 15
+
+[imaging]
+  anchor = "Center"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.8
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+
+[permalinks]
+  posts = "/:year/:month/:slug/"
+
+[related]
+  threshold = 0
+  toLower = false
+
+    [[related.indices]]
+      name = "tags"
+      weight = 100
+
+    [[related.indices]]
+      name = "categories"
+      weight = 100
+
+    [[related.indices]]
+      name = "date"
+      weight = 10
+
+[server]
+  [[server.headers]]
+    for = "/*.html"
+
+    [server.headers.values]
+      X-Robots-Tag = "noindex"

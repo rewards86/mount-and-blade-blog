@@ -1,0 +1,20 @@
+{{/* Page-level head extensions (uncached, full page context available) */}}
+
+{{/* Article structured data */}}
+{{ if .IsPage }}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": {{ .Title | jsonify }},
+    {{ with .Description }}"description": {{ . | jsonify }},{{ end }}
+    "url": {{ .Permalink | jsonify }},
+    "datePublished": {{ .Date.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+    {{ with .Lastmod }}"dateModified": {{ .Format "2006-01-02T15:04:05Z07:00" | jsonify }},{{ end }}
+    "publisher": {
+      "@type": "Organization",
+      "name": {{ $.Site.Title | jsonify }}
+    }
+  }
+  </script>
+{{ end }}

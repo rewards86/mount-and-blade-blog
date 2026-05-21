@@ -1,0 +1,8 @@
+{{/* Site-level head extensions (cached, only site context available) */}}
+
+{{/* Blogger URL compatibility alternate links */}}
+{{ with .Params.aliases }}
+  {{ range first 1 . }}
+    <link rel="alternate" href="{{ . | absURL }}">
+  {{ end }}
+{{ end }}

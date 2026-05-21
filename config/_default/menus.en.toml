@@ -1,0 +1,82 @@
+[[main]]
+  name = "Home"
+  pageRef = "/"
+  weight = 10
+
+[[main]]
+  name = "Bannerlord"
+  weight = 20
+
+[[main]]
+  name = "Guides"
+  parent = "Bannerlord"
+  pageRef = "tags/bannerlord-guide"
+  weight = 10
+
+[[main]]
+  name = "Mods"
+  parent = "Bannerlord"
+  pageRef = "tags/bannerlord-mods"
+  weight = 20
+
+[[main]]
+  name = "Support"
+  parent = "Bannerlord"
+  pageRef = "tags/technical-support"
+  weight = 30
+
+[[main]]
+  name = "Warband"
+  weight = 30
+
+[[main]]
+  name = "Guides"
+  parent = "Warband"
+  pageRef = "tags/warband-guide"
+  weight = 10
+
+[[main]]
+  name = "Mods"
+  parent = "Warband"
+  pageRef = "tags/warband-mods"
+  weight = 20
+
+[[main]]
+  name = "About"
+  pageRef = "about"
+  weight = 40
+
+[[main]]
+  name = "Contact"
+  pageRef = "contact"
+  weight = 50
+
+[[main]]
+  name = "Privacy Policy"
+  pageRef = "privacy-policy"
+  weight = 60
+
+[[footer]]
+  name = "About"
+  pageRef = "about"
+  weight = 10
+
+[[footer]]
+  name = "Contact"
+  pageRef = "contact"
+  weight = 20
+
+[[footer]]
+  name = "Privacy Policy"
+  pageRef = "privacy-policy"
+  weight = 30
+
+[[footer]]
+  name = "Tags"
+  pageRef = "tags"
+  weight = 40
+
+[[footer]]
+  name = "Categories"
+  pageRef = "categories"
+  weight = 50

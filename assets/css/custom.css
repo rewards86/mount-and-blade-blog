@@ -1,0 +1,136 @@
+/* Gaming blog customizations for Mount and Blade Game */
+
+/* Medieval/fantasy color accents */
+:root {
+  --mb-primary: #8b4513;
+  --mb-secondary: #d4a574;
+  --mb-dark: #2c1810;
+  --mb-accent: #c9a050;
+  --mb-bg: #faf6f0;
+}
+
+/* Dark mode overrides */
+.dark {
+  --mb-primary: #c9a050;
+  --mb-secondary: #8b7355;
+  --mb-dark: #1a0e08;
+  --mb-accent: #d4a574;
+  --mb-bg: #1a1410;
+}
+
+/* Content-first layout: article cards */
+body {
+  background-color: var(--mb-bg);
+}
+
+/* Article styling */
+.prose h2 {
+  color: var(--mb-primary) !important;
+  border-bottom: 2px solid var(--mb-secondary);
+  padding-bottom: 0.3em;
+}
+
+.prose h3 {
+  color: var(--mb-dark) !important;
+}
+
+.prose a {
+  color: var(--mb-primary) !important;
+}
+
+.prose a:hover {
+  color: var(--mb-accent) !important;
+}
+
+/* Sidebar/archive feel - style taxonomies */
+.term-card a {
+  color: var(--mb-primary);
+}
+
+/* Blog-like summary cards */
+.article-summary {
+  border-left: 3px solid var(--mb-secondary);
+  padding-left: 1em;
+}
+
+/* Reading time badge */
+.reading-time {
+  font-size: 0.85em;
+  color: var(--mb-secondary);
+}
+
+/* Sticky navigation enhancement */
+nav {
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.dark nav {
+  background-color: rgba(26, 20, 16, 0.95) !important;
+}
+
+/* Pagination styling */
+.pagination {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid var(--mb-secondary);
+}
+
+/* Mobile responsive: ensure readability */
+@media (max-width: 640px) {
+  .prose {
+    font-size: 1.05em;
+    line-height: 1.7;
+  }
+}
+
+/* Footer customization */
+footer {
+  border-top: 3px solid var(--mb-secondary);
+}
+
+/* Tag badges */
+.badge {
+  background-color: var(--mb-secondary) !important;
+  color: #fff !important;
+}
+
+/* Breadcrumbs */
+.breadcrumb {
+  font-size: 0.85em;
+  opacity: 0.8;
+}
+
+/* Search results */
+.search-result {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0.75em 0;
+}
+
+/* Category and tag pages */
+.taxonomy-list {
+  column-count: 2;
+}
+
+@media (max-width: 640px) {
+  .taxonomy-list {
+    column-count: 1;
+  }
+}
+
+/* Light mode default with warm tones */
+:root {
+  --color-neutral: 255, 250, 240;
+}
+
+/* Better typography for gaming content */
+code {
+  font-size: 0.85em;
+  background-color: #f0e8dc;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+.dark code {
+  background-color: #2c1810;
+}

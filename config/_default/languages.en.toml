@@ -1,0 +1,16 @@
+locale = "en"
+label = "English"
+weight = 1
+title = "Mount and Blade Game"
+
+[params]
+  displayName = "EN"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+  description = "The best Mount and Blade guides, mods, and technical support for Bannerlord and Warband."
+
+[params.author]
+  name = "Mount & Blade Admin"
+  headline = "Mount and Blade Game - Guides, Mods & Support"
+  bio = "Your source for Mount and Blade: Bannerlord and Warband guides, mods, and technical support."
