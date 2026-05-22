@@ -1,23 +1,24 @@
 /* =====================================================
-   Mount & Blade Game — Custom Theme
-   Targets real Blowfish native card HTML classes
+   Mount & Blade Game — Custom Theme (Improved)
    ===================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap');
 
 /* ===== CSS Variables ===== */
 :root {
-  --gold: #c9a84c;
-  --gold-light: #e8c96a;
-  --gold-dim: #8a6e2e;
-  --gold-bg: rgba(201, 168, 76, 0.10);
+  --gold:        #c9a84c;
+  --gold-light:  #e8c96a;
+  --gold-dim:    #8a6e2e;
+  --gold-bg:     rgba(201, 168, 76, 0.10);
   --gold-border: rgba(201, 168, 76, 0.28);
-  --ink: #1e1c18;
-  --parchment: #faf8f3;
-  --card-bg: #ffffff;
+  --ink:         #1e1c18;
+  --parchment:   #faf8f3;
+  --card-bg:     #ffffff;
   --card-border: #e8e4d8;
-  --muted: #6b6557;
-  --t: 0.2s ease;
+  --muted:       #6b6557;
+  --t:           0.2s ease;
+  /* Header height used in multiple places */
+  --header-h:    56px;
 }
 
 /* ===== Global ===== */
@@ -32,49 +33,58 @@ body {
   color: #d4cfc4 !important;
 }
 
-/* ===== Fixed Header (full-width bg, centered content) ===== */
+/* =====================================================
+   NAVBAR — DESKTOP
+   Fixed, full-width background, centered inner content.
+   .main-menu is the wrapper div in basic.html
+   ===================================================== */
 .main-menu {
   position: fixed !important;
-  top: 0; left: 50%; right: auto;
-  transform: translateX(-50%);
-  width: 100vw !important;
-  max-width: 100vw !important;
-  background-color: rgba(250, 248, 243, 0.96) !important;
-  backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px) !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: var(--header-h);
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  background-color: rgba(250, 248, 243, 0.97) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
   border-bottom: 1px solid var(--gold-border) !important;
-  box-shadow: 0 1px 16px rgba(0,0,0,0.07) !important;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.06) !important;
   z-index: 999;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-.main-menu > * {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+  padding: 0 max(24px, calc((100% - 1350px) / 2)) !important;
 }
 
 .dark .main-menu {
-  background-color: rgba(20, 18, 16, 0.96) !important;
+  background-color: rgba(20, 18, 16, 0.97) !important;
   border-bottom-color: rgba(201, 168, 76, 0.15) !important;
 }
 
-.dark footer#site-footer {
-  background-color: #141210 !important;
-  border-top-color: rgba(201,168,76,0.1) !important;
+/* Remove ms-auto push so items space out within centered container */
+.main-menu > .flex.items-center.ms-auto {
+  margin-left: 0 !important;
 }
 
-/* Site title / Logo */
-.main-menu .logo {
-  max-height: none !important;
-  max-width: none !important;
-  width: 225px !important;
+/* Site logo */
+.main-menu .logo,
+.main-menu img.logo {
+  width: 220px !important;
   height: 28px !important;
+  max-height: 28px !important;
+  max-width: 220px !important;
+  object-fit: contain;
+  object-position: left center;
 }
 
-/* Nav links */
-.main-menu nav { gap: 0 !important; }
+/* Nav links (desktop) */
+.main-menu nav {
+  gap: 0 !important;
+}
 
 .main-menu nav a,
 .main-menu nav button {
@@ -82,76 +92,230 @@ body {
   text-transform: uppercase !important;
   font-size: 11px !important;
   font-weight: 600 !important;
-  letter-spacing: 1px;
+  letter-spacing: 1.1px;
   color: #5a5244 !important;
-  padding: 16px 11px !important;
+  padding: 16px 12px !important;
   transition: color var(--t) !important;
+  white-space: nowrap;
 }
 
 .dark .main-menu nav a,
-.dark .main-menu nav button { color: #9a9080 !important; }
+.dark .main-menu nav button {
+  color: #9a9080 !important;
+}
 
 .main-menu nav a:hover,
-.main-menu nav button:hover { color: var(--gold) !important; }
+.main-menu nav button:hover {
+  color: var(--gold) !important;
+}
 
-/* Dropdown */
+/* Active menu item underline */
+.main-menu nav a span.active {
+  text-decoration-color: var(--gold) !important;
+}
+
+/* ===== Dropdown (desktop) ===== */
 .menuhide {
   position: absolute !important;
-  top: calc(100% + 4px) !important;
-  left: 0 !important;
-  background-color: #faf8f3 !important;
+  top: calc(100% + 6px) !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  background-color: #fefcf8 !important;
   border: 1px solid var(--gold-border) !important;
-  min-width: 200px !important;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.10) !important;
-  border-radius: 6px !important;
+  min-width: 190px !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12) !important;
+  border-radius: 8px !important;
   padding: 8px 0 !important;
+  /* Override blowfish default backdrop that blurs wrong bg */
   backdrop-filter: none !important;
+}
+
+.menuhide > div {
+  /* Blowfish wraps in an inner div — reset its styling */
+  background: transparent !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 4px 0 !important;
+  margin-top: 0 !important;
 }
 
 .dark .menuhide {
   background-color: #1e1c18 !important;
-  border-color: rgba(201,168,76,0.15) !important;
+  border-color: rgba(201, 168, 76, 0.18) !important;
 }
 
 .menuhide a {
   font-family: 'Inter', sans-serif !important;
-  padding: 9px 18px !important;
+  display: block;
+  padding: 9px 20px !important;
   text-transform: none !important;
   font-size: 13px !important;
   font-weight: 500 !important;
   white-space: nowrap;
   color: #3d3928 !important;
+  transition: background var(--t), color var(--t) !important;
 }
 
-.dark .menuhide a { color: #c0b898 !important; }
-.menuhide a:hover { color: var(--gold) !important; }
-.nested-menu svg { width: 11px !important; height: 11px !important; }
+.dark .menuhide a {
+  color: #c0b898 !important;
+}
 
-/* Push content below fixed header */
-.relative.flex.flex-col.grow { margin-top: 58px; }
+.menuhide a:hover {
+  color: var(--gold) !important;
+  background: var(--gold-bg) !important;
+}
 
-/* ===== "Recent" heading ===== */
+.nested-menu svg {
+  width: 11px !important;
+  height: 11px !important;
+}
+
+/* Dropdown arrow chevron — inline next to label */
+.nested-menu .flex.items-center a span:last-child svg {
+  margin-left: 3px;
+  transition: transform var(--t);
+}
+.nested-menu:hover .flex.items-center a span:last-child svg,
+.nested-menu:focus-within .flex.items-center a span:last-child svg {
+  transform: rotate(180deg);
+}
+
+/* =====================================================
+   NAVBAR — MOBILE
+   Simple show/hide toggle (Blogger-style).
+   Hamburger/X buttons toggle #mobile-nav visibility.
+   ===================================================== */
+
+/* Mobile button bar height */
+.flex.items-center.h-14.gap-4 {
+  height: var(--header-h) !important;
+}
+
+/* Force toggle visibility - peer-checked may not be in prebuilt CSS */
+#mobile-menu-toggle:checked ~ #mobile-nav {
+  display: block !important;
+}
+
+/* Hamburger & X buttons */
+#show-menu-btn,
+#close-menu-btn {
+  color: #5a5244 !important;
+  transition: color var(--t);
+}
+
+.dark #show-menu-btn,
+.dark #close-menu-btn {
+  color: #9a9080 !important;
+}
+
+#show-menu-btn:hover,
+#close-menu-btn:hover {
+  color: var(--gold) !important;
+}
+
+/* Mobile dropdown nav panel */
+#mobile-nav {
+  background-color: rgba(250, 248, 243, 0.99) !important;
+  border-top: 1px solid var(--gold-border) !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.10) !important;
+}
+
+.dark #mobile-nav {
+  background-color: rgba(20, 18, 16, 0.99) !important;
+  border-top-color: rgba(201, 168, 76, 0.12) !important;
+}
+
+/* Mobile menu items */
+#mobile-nav .mobile-menu-item > div > a {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: #2d2a22 !important;
+}
+
+.dark #mobile-nav .mobile-menu-item > div > a {
+  color: #d4cfc4 !important;
+}
+
+#mobile-nav .mobile-menu-item > div > a:hover {
+  color: var(--gold) !important;
+}
+
+/* Mobile submenu chevron */
+#mobile-nav label[for^="mobile-submenu"] {
+  color: var(--gold-dim) !important;
+}
+
+.dark #mobile-nav label[for^="mobile-submenu"] {
+  color: var(--gold) !important;
+}
+
+/* Mobile submenu children */
+#mobile-nav .ms-6 a span {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 12px !important;
+  color: #5a5244 !important;
+}
+
+.dark #mobile-nav .ms-6 a span {
+  color: #9a9080 !important;
+}
+
+#mobile-nav .ms-6 a:hover span {
+  color: var(--gold) !important;
+}
+
+/* Mobile appearance switcher + search button */
+#appearance-switcher-mobile,
+#search-button-mobile {
+  color: #5a5244 !important;
+  transition: color var(--t);
+}
+
+.dark #appearance-switcher-mobile,
+.dark #search-button-mobile {
+  color: #9a9080 !important;
+}
+
+#appearance-switcher-mobile:hover,
+#search-button-mobile:hover {
+  color: var(--gold) !important;
+}
+
+/* ===== Push content below fixed header ===== */
+.relative.flex.flex-col.grow {
+  margin-top: var(--header-h) !important;
+}
+
+/* =====================================================
+   "Recent" section heading
+   ===================================================== */
 h2.mt-8.text-2xl.font-extrabold {
   font-family: 'Cinzel', serif !important;
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-size: 0.9rem !important;
+  font-size: 0.85rem !important;
   color: var(--gold-dim) !important;
   border-bottom: 1px solid var(--gold-border);
   padding-bottom: 10px;
-  margin-bottom: 24px !important;
+  margin-bottom: 28px !important;
 }
 
-.dark h2.mt-8.text-2xl.font-extrabold { color: var(--gold) !important; }
+.dark h2.mt-8.text-2xl.font-extrabold {
+  color: var(--gold) !important;
+}
 
-/* ===== Blowfish native cards: article-link--card ===== */
+/* =====================================================
+   ARTICLE CARDS
+   ===================================================== */
 article.article-link--card {
   background: var(--card-bg) !important;
   border: 1px solid var(--card-border) !important;
-  border-radius: 8px !important;
+  border-radius: 10px !important;
   overflow: hidden;
   transition: box-shadow var(--t), transform var(--t), border-color var(--t) !important;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.06) !important;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.05) !important;
 }
 
 .dark article.article-link--card {
@@ -160,7 +324,7 @@ article.article-link--card {
 }
 
 article.article-link--card:hover {
-  box-shadow: 0 6px 24px rgba(0,0,0,0.12) !important;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.11) !important;
   transform: translateY(-3px);
   border-color: var(--gold-border) !important;
 }
@@ -171,24 +335,28 @@ article.article-link--card .thumbnail_card img {
 }
 
 article.article-link--card:hover .thumbnail_card img {
-  transform: scale(1.05) !important;
+  transform: scale(1.04) !important;
 }
 
-/* Card title link */
+/* Card title */
 article.article-link--card header a {
   font-family: 'Cinzel', serif !important;
-  font-size: 1rem !important;
+  font-size: 0.95rem !important;
   font-weight: 600 !important;
   line-height: 1.4 !important;
   color: var(--ink) !important;
   text-decoration: none !important;
 }
 
-.dark article.article-link--card header a { color: #e8e0d0 !important; }
+.dark article.article-link--card header a {
+  color: #e8e0d0 !important;
+}
 
-article.article-link--card header a:hover { color: var(--gold) !important; }
+article.article-link--card header a:hover {
+  color: var(--gold) !important;
+}
 
-/* Date + reading time row */
+/* Date + meta row */
 article.article-link--card .text-sm.text-neutral-500 {
   font-family: 'Inter', sans-serif !important;
   font-size: 11px !important;
@@ -196,7 +364,7 @@ article.article-link--card .text-sm.text-neutral-500 {
   color: #9a9080 !important;
 }
 
-/* Gold dot separator between date and reading time */
+/* Gold separator dot */
 article.article-link--card .text-primary-500 {
   color: var(--gold) !important;
 }
@@ -209,10 +377,11 @@ article.article-link--card .article-link__summary {
   color: #5a5040 !important;
 }
 
-.dark article.article-link--card .article-link__summary { color: #908878 !important; }
+.dark article.article-link--card .article-link__summary {
+  color: #908878 !important;
+}
 
-/* ===== Tag badges (native Blowfish style) ===== */
-/* These use: rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 */
+/* Tag badges */
 article.article-link--card span.rounded-md {
   font-family: 'Inter', sans-serif !important;
   font-size: 10px !important;
@@ -222,8 +391,8 @@ article.article-link--card span.rounded-md {
   border-color: var(--gold-border) !important;
   color: var(--gold-dim) !important;
   background: var(--gold-bg) !important;
-  border-radius: 3px !important;
-  padding: 1px 7px !important;
+  border-radius: 4px !important;
+  padding: 2px 7px !important;
   transition: background var(--t), border-color var(--t);
 }
 
@@ -238,12 +407,13 @@ article.article-link--card a:hover span.rounded-md {
   border-color: rgba(201,168,76,0.5) !important;
 }
 
-/* ===== Article / single post page ===== */
+/* =====================================================
+   SINGLE ARTICLE PAGE
+   ===================================================== */
 .article-content.max-w-prose {
   max-width: 100% !important;
 }
 
-/* Remove max-w-fit constraint on article wrapper */
 .min-w-0.min-h-0.max-w-fit {
   max-width: 100% !important;
   width: 100% !important;
@@ -253,6 +423,7 @@ article.article-link--card a:hover span.rounded-md {
 footer.pt-8.max-w-prose {
   max-width: 900px !important;
 }
+
 .prose {
   font-family: 'Source Serif 4', serif !important;
 }
@@ -276,11 +447,13 @@ footer.pt-8.max-w-prose {
 .prose a:hover { color: var(--gold) !important; }
 
 .prose img {
-  border-radius: 6px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  border-radius: 8px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.10);
 }
 
-/* ===== Breadcrumbs ===== */
+/* =====================================================
+   BREADCRUMBS
+   ===================================================== */
 .breadcrumb { color: var(--gold) !important; }
 
 .breadcrumb a {
@@ -291,7 +464,9 @@ footer.pt-8.max-w-prose {
 
 .breadcrumb a:hover { color: var(--gold-dim) !important; }
 
-/* ===== Footer (full-width bg, centered content) ===== */
+/* =====================================================
+   FOOTER
+   ===================================================== */
 footer#site-footer {
   width: 100vw !important;
   max-width: 100vw !important;
@@ -299,6 +474,11 @@ footer#site-footer {
   background-color: #f2ede2 !important;
   border-top: 1px solid var(--gold-border) !important;
   font-family: 'Inter', sans-serif;
+}
+
+.dark footer#site-footer {
+  background-color: #141210 !important;
+  border-top-color: rgba(201,168,76,0.10) !important;
 }
 
 footer#site-footer > * {
@@ -315,7 +495,9 @@ footer#site-footer a {
 footer#site-footer a:hover { color: var(--gold-dim) !important; }
 footer a[href*="blowfish"] { display: none; }
 
-/* ===== Tags on individual tag pages ===== */
+/* =====================================================
+   TAGS
+   ===================================================== */
 a[href*="/tags/"] span.rounded-md,
 a[href*="/tags/"] span[class*="rounded"] {
   font-family: 'Inter', sans-serif !important;
@@ -328,76 +510,52 @@ a[href*="/tags/"] span[class*="rounded"] {
   background: var(--gold-bg) !important;
 }
 
-/* ===== Share buttons — native brand colors ===== */
-section.pt-4.text-xl a {
-  background-color: #555 !important;
-  color: #fff !important;
-}
-
-section.pt-4.text-xl a[href*="facebook"] {
-  background-color: #1877F2 !important;
-}
-
+/* =====================================================
+   SHARE BUTTONS
+   ===================================================== */
+section.pt-4.text-xl a { background-color: #555 !important; color: #fff !important; }
+section.pt-4.text-xl a[href*="facebook"]  { background-color: #1877F2 !important; }
 section.pt-4.text-xl a[href*="twitter"],
-section.pt-4.text-xl a[href*="x.com"] {
-  background-color: #000 !important;
-}
-
+section.pt-4.text-xl a[href*="x.com"]     { background-color: #000 !important; }
 .dark section.pt-4.text-xl a[href*="twitter"],
-.dark section.pt-4.text-xl a[href*="x.com"] {
-  background-color: #fff !important;
-  color: #000 !important;
-}
+.dark section.pt-4.text-xl a[href*="x.com"] { background-color: #fff !important; color: #000 !important; }
+section.pt-4.text-xl a[href*="reddit"]    { background-color: #FF4500 !important; }
+section.pt-4.text-xl a[href*="mailto"]    { background-color: #EA4335 !important; }
 
-section.pt-4.text-xl a[href*="reddit"] {
-  background-color: #FF4500 !important;
-}
-
-section.pt-4.text-xl a[href*="mailto"] {
-  background-color: #EA4335 !important;
-}
-
-/* ===== Scroll-to-top button ===== */
+/* =====================================================
+   SCROLL TO TOP
+   ===================================================== */
 #scroll-to-top a {
-  background: rgba(201,168,76,0.15) !important;
+  background: rgba(201,168,76,0.14) !important;
   color: var(--gold-dim) !important;
   border: 1px solid var(--gold-border);
   transition: background var(--t), color var(--t);
 }
 
 #scroll-to-top a:hover {
-  background: rgba(201,168,76,0.3) !important;
+  background: rgba(201,168,76,0.28) !important;
   color: var(--gold) !important;
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
-  .main-menu { padding: 0 12px !important; }
-  .main-menu > * { padding: 0 10px; }
-  .main-menu > a { font-size: 12px !important; letter-spacing: 1.5px; }
-
-  /* Hamburger icon */
-  .hamburger {
-    display: flex !important;
-    padding: 8px;
+/* =====================================================
+   RESPONSIVE — MOBILE (<768px)
+   NOTE: Blowfish uses md: breakpoint = 768px.
+   The mobile menu is controlled by the #mobile-menu-toggle
+   checkbox + Tailwind peer classes. We don't need to show/hide
+   the hamburger — Blowfish handles that. We just style things.
+   ===================================================== */
+@media (max-width: 767px) {
+  /* Slightly reduce header padding on mobile */
+  .main-menu {
+    padding: 0 16px !important;
   }
 
-  /* Mobile menu sidebar */
-  .mobile-menu-sidebar {
-    background-color: #faf8f3 !important;
-  }
-
-  .dark .mobile-menu-sidebar {
-    background-color: #1a1816 !important;
-  }
-
-  /* Menu item hover */
-  .mobile-menu-item a:hover {
-    color: var(--gold) !important;
-  }
-
-  /* Dropdown chevron */
-  .mobile-menu-sidebar .peer\/full + div .border-s-2 {
-    border-color: var(--gold-border) !important;
+  /* Logo slightly smaller on mobile */
+  .main-menu .logo,
+  .main-menu img.logo {
+    width: 180px !important;
+    height: 24px !important;
+    max-height: 24px !important;
+    max-width: 180px !important;
   }
 }

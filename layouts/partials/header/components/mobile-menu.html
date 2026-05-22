@@ -24,75 +24,78 @@
     </button>
   {{ end }}
 
-  {{ if or
-    .Site.Menus.main
-    .Site.Menus.subnavigation
-    .Site.Params.enableA11y
-  }}
+  {{ if or .Site.Menus.main .Site.Menus.subnavigation .Site.Params.enableA11y }}
     <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
-    <label for="mobile-menu-toggle" class="hamburger flex items-center justify-center cursor-pointer bf-icon-color-hover">
+
+    <label for="mobile-menu-toggle" id="show-menu-btn" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
       {{ partial "icon.html" "bars" }}
     </label>
 
-    <div
-      class="mobile-menu-overlay fixed inset-0 z-40 bg-black/50 opacity-0 invisible transition-[opacity,visibility] duration-300 peer-checked:opacity-100 peer-checked:visible"
-      onclick="document.getElementById('mobile-menu-toggle').click()">
-    </div>
+    <label for="mobile-menu-toggle" id="close-menu-btn" class="flex items-center justify-center cursor-pointer bf-icon-color-hover" style="display:none">
+      {{ partial "icon.html" "xmark" }}
+    </label>
 
-    <div
-      class="mobile-menu-sidebar fixed top-0 right-0 z-50 h-full w-72 max-w-[85vw] bg-white dark:bg-neutral-900 shadow-2xl translate-x-full transition-transform duration-300 peer-checked:translate-x-0 overflow-y-auto">
-      <div class="flex items-center justify-between p-4 border-b border-neutral-200 dark:border-neutral-700">
-        <span class="font-bold text-lg text-neutral-800 dark:text-neutral-100">Menu</span>
-        <label
-          for="mobile-menu-toggle"
-          class="flex items-center justify-center h-8 w-8 cursor-pointer bf-icon-color-hover rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-800">
-          {{ partial "icon.html" "xmark" }}
-        </label>
-      </div>
-      <nav class="p-4 space-y-1">
+    <div id="mobile-nav" class="fixed left-0 right-0 z-50 bg-white dark:bg-neutral-900 shadow-lg border-t border-neutral-200 dark:border-neutral-700 hidden peer-checked:block"
+      style="top: var(--header-h, 56px); max-height: calc(100vh - var(--header-h, 56px)); overflow-y-auto;">
+      <nav class="py-2" style="max-width: 1350px; margin: 0 auto; padding-left: 24px; padding-right: 24px;">
         {{ template "mobile-main-menu" . }}
-        {{ template "mobile-subnavigation" . }}
-        {{ template "mobile-footer-components" . }}
       </nav>
     </div>
   {{ end }}
 </div>
 
+<script>
+  (function() {
+    var toggle = document.getElementById('mobile-menu-toggle');
+    var showBtn = document.getElementById('show-menu-btn');
+    var closeBtn = document.getElementById('close-menu-btn');
+    if (toggle && showBtn && closeBtn) {
+      toggle.addEventListener('change', function() {
+        if (this.checked) {
+          showBtn.style.display = 'none';
+          closeBtn.style.display = 'flex';
+        } else {
+          showBtn.style.display = 'flex';
+          closeBtn.style.display = 'none';
+        }
+      });
+    }
+  })();
+</script>
+
 {{ define "mobile-main-menu" }}
   {{ range .Site.Menus.main }}
-    {{ $submenuId := printf "fullscreen-submenu-%s" (.Identifier | default .Name | anchorize) }}
-    <div class="mobile-menu-item">
-      <a
-        href="{{ .URL }}"
-        {{ with or .Name .Pre }}aria-label="{{ . }}"{{ end }}
-        {{ if or (strings.HasPrefix .URL "http:" ) (strings.HasPrefix .URL "https:" ) }}
-          target="_blank"
-        {{ end }}
-        class="flex items-center gap-3 py-3 px-2 group text-neutral-700 dark:text-neutral-200 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">
-        {{ if .Pre }}
-          <span class="flex items-center justify-center h-6 w-6 text-lg">
-            {{ partial "icon.html" .Pre }}
-          </span>
-        {{ end }}
-        <span class="text-base font-medium">
-          {{ .Name | markdownify }}
-        </span>
+    {{ $submenuId := printf "mobile-submenu-%s" (.Identifier | default .Name | anchorize) }}
+    <div class="mobile-menu-item border-b border-neutral-100 dark:border-neutral-800 last:border-b-0">
+      <div class="flex items-center justify-between">
+        <a
+          href="{{ .URL }}"
+          {{ with or .Name .Pre }}aria-label="{{ . }}"{{ end }}
+          {{ if or (strings.HasPrefix .URL "http:" ) (strings.HasPrefix .URL "https:" ) }}
+            target="_blank"
+          {{ end }}
+          class="flex items-center gap-3 py-3 px-2 text-neutral-700 dark:text-neutral-200 hover:text-primary-500 dark:hover:text-primary-400 transition-colors text-sm font-medium flex-1">
+          {{ if .Pre }}
+            <span class="flex items-center justify-center h-5 w-5">
+              {{ partial "icon.html" .Pre }}
+            </span>
+          {{ end }}
+          <span>{{ .Name | markdownify }}</span>
+        </a>
         {{ if .HasChildren }}
           <label
             for="{{ $submenuId }}"
-            class="ms-auto flex items-center justify-center h-8 w-8 cursor-pointer rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
+            class="flex items-center justify-center h-8 w-8 cursor-pointer rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
             {{ partial "icon.html" "chevron-down" }}
           </label>
         {{ end }}
-      </a>
+      </div>
 
       {{ if .HasChildren }}
-        <input checked type="checkbox" id="{{ $submenuId }}" autocomplete="off" class="hidden peer/full">
-
-        <div
-          class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 peer-checked/full:grid-rows-[1fr]">
+        <input checked type="checkbox" id="{{ $submenuId }}" autocomplete="off" class="hidden peer/sub">
+        <div class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 peer-checked/sub:grid-rows-[1fr]">
           <div class="overflow-hidden">
-            <div class="ms-4 mt-1 mb-2 space-y-0 border-s-2 border-neutral-200 dark:border-neutral-700">
+            <div class="ms-6 mt-1 mb-2 space-y-0 border-s-2 border-neutral-200 dark:border-neutral-700">
               {{ range .Children }}
                 <a
                   href="{{ .URL }}"
@@ -100,9 +103,9 @@
                   {{ if or (strings.HasPrefix .URL "http:" ) (strings.HasPrefix .URL "https:" ) }}
                     target="_blank"
                   {{ end }}
-                  class="flex items-center gap-3 py-2 px-4 group text-neutral-600 dark:text-neutral-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors text-sm">
+                  class="flex items-center gap-3 py-2 px-4 text-neutral-600 dark:text-neutral-400 hover:text-primary-500 dark:hover:text-primary-400 transition-colors text-sm">
                   {{ if .Pre }}
-                    <span class="flex items-center justify-center h-5 w-5">
+                    <span class="flex items-center justify-center h-4 w-4">
                       {{ partial "icon.html" .Pre }}
                     </span>
                   {{ end }}
@@ -112,42 +115,6 @@
             </div>
           </div>
         </div>
-      {{ end }}
-    </div>
-  {{ end }}
-{{ end }}
-
-{{ define "mobile-subnavigation" }}
-  {{ if .Site.Menus.subnavigation }}
-    <div class="flex flex-wrap gap-2 mt-6 pt-6 border-t border-neutral-200 dark:border-neutral-700">
-      {{ range .Site.Menus.subnavigation }}
-        <a
-          href="{{ .URL }}"
-          {{ with or .Name .Pre }}aria-label="{{ . }}"{{ end }}
-          class="inline-flex items-center gap-2 px-3 py-2 rounded-full text-sm hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
-          {{ if .Pre }}
-            <span class="flex items-center justify-center h-4 w-4">
-              {{ partial "icon.html" .Pre }}
-            </span>
-          {{ end }}
-          <span>{{ .Name | markdownify }}</span>
-        </a>
-      {{ end }}
-    </div>
-  {{ end }}
-{{ end }}
-
-{{ define "mobile-footer-components" }}
-  {{ if or
-    hugo.IsMultilingual
-    .Site.Params.enableA11y
-  }}
-    <div
-      class="flex flex-wrap items-center gap-x-6 ps-2 mt-6 pt-6 border-t border-neutral-200 dark:border-neutral-700">
-      {{ partial "header/components/translations.html" . }}
-
-      {{ if .Site.Params.enableA11y | default false }}
-        {{ partial "header/components/a11y.html" (dict "prefix" "mobile-menu-") }}
       {{ end }}
     </div>
   {{ end }}
