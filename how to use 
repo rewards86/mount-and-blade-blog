@@ -1,0 +1,48 @@
+how do i add more posts to the site
+Thought: The user wants to know how to add more posts to their Hugo site. I should explain the process clearly:
+1. Create a new Markdown file in content/posts/
+2. Use the frontmatter format (title, date, slug, tags, aliases, featureimage)
+3. Write the content in Markdown or HTML
+4. Build/deploy
+I should also mention they can use the import script if they have more Blogger exports, or manually create files.
+Two options:
+1. Manual (new post)
+Create a .md file in content/posts/:
+---
+title: "Your Post Title"
+date: 2024-05-21T10:00:00
+slug: "your-post-slug"
+tags:
+  - Guide
+  - Bannerlord
+aliases:
+  - /2024/05/your-post-title.html
+featureimage: "https://example.com/image.jpg"
+---
+Your post content here. Markdown or HTML both work.
+2. Bulk import (more Blogger exports)
+If you have another Google Takeout feed.atom:
+python3 scripts/import-blogger.py path/to/feed.atom content/posts/
+Then commit and push — GitHub Actions will auto-deploy:
+git add content/posts/ && git commit -m "Add new posts" && git push
+▣  Build · Qwen3.6 Plus Free · 8.9s
+how would i do a new post not being imported from blogger
+Thought: The user wants to create a new post manually, not imported from Blogger. I already gave them the template in the previous response, but they're asking for more detail on the process. Let me give them the exact steps.
+Create a new .md file in content/posts/:
+cd /home/homeboy/Documents/mountandbladegame-hugo
+Then create the file:
+---
+title: "Your Post Title"
+date: 2024-05-21T10:00:00
+slug: "your-post-slug"
+tags:
+  - Guide
+  - Bannerlord
+featureimage: "https://example.com/image.jpg"
+---
+Your post content here. Markdown or HTML both work.
+Then commit and push:
+git add content/posts/your-post-slug.md
+git commit -m "Add: Your Post Title"
+git push
+GitHub Actions will auto-deploy.

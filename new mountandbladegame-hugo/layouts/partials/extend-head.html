@@ -1,0 +1,10 @@
+{{/* Site-level head extensions (cached, only site context available) */}}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+{{/* Blogger URL compatibility alternate links */}}
+{{ with .Params.aliases }}
+  {{ range first 1 . }}
+    <link rel="alternate" href="{{ . | absURL }}">
+  {{ end }}
+{{ end }}

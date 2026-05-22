@@ -1,0 +1,105 @@
+colorScheme = "mountblade"
+defaultAppearance = "light"
+autoSwitchAppearance = true
+
+enableA11y = false
+enableSearch = true
+enableCodeCopy = true
+enableStructuredBreadcrumbs = true
+
+mainSections = ["posts"]
+
+disableImageOptimization = true
+disableTextInHeader = false
+
+defaultBackgroundImage = ""
+defaultFeaturedImage = ""
+hotlinkFeatureImage = true
+
+highlightCurrentMenuArea = true
+smartTOC = true
+smartTOCHideUnfocusedChildren = false
+
+fingerprintAlgorithm = "sha512"
+
+[header]
+  layout = "basic"
+
+[footer]
+  showMenu = true
+  showCopyright = true
+  showThemeAttribution = false
+  showAppearanceSwitcher = true
+  showScrollToTop = true
+
+[homepage]
+  layout = "profile"
+  showRecent = true
+  showRecentItems = 15
+  showMoreLink = false
+  cardView = true
+  cardViewScreenWidth = false
+  layoutBackgroundBlur = false
+
+[article]
+  showDate = true
+  showViews = false
+  showLikes = false
+  showDateOnlyInArticle = false
+  showDateUpdated = false
+  showAuthor = true
+  showHero = false
+  heroStyle = "basic"
+  showBreadcrumbs = true
+  showDraftLabel = false
+  showEdit = false
+  seriesOpened = false
+  showHeadingAnchors = true
+  showPagination = true
+  invertPagination = false
+  showReadingTime = true
+  showTableOfContents = false
+  showRelatedContent = true
+  relatedContentLimit = 3
+  showTaxonomies = true
+  showAuthorsBadges = false
+  showWordCount = false
+  sharingLinks = ["facebook", "twitter", "reddit", "email"]
+  showZenMode = false
+
+[list]
+  showHero = false
+  heroStyle = "basic"
+  showBreadcrumbs = true
+  showSummary = true
+  showViews = false
+  showLikes = false
+  showTableOfContents = false
+  showCards = true
+  orderByWeight = false
+  groupByYear = true
+  cardView = true
+  cardViewScreenWidth = false
+  constrainItemsWidth = false
+
+[sitemap]
+  excludedKinds = []
+
+[taxonomy]
+  showTermCount = true
+  showHero = false
+  showBreadcrumbs = true
+  showViews = false
+  showLikes = false
+  showTableOfContents = false
+  cardView = true
+
+[term]
+  showHero = false
+  showBreadcrumbs = true
+  showViews = false
+  showLikes = false
+  showTableOfContents = false
+  groupByYear = true
+  cardView = true
+  cardViewScreenWidth = false
