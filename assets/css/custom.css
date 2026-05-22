@@ -65,18 +65,13 @@ body {
   border-top-color: rgba(201,168,76,0.1) !important;
 }
 
-/* Site title */
-.main-menu > a {
-  font-family: 'Cinzel', serif !important;
-  color: var(--ink) !important;
-  font-size: 14px !important;
-  font-weight: 700 !important;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  text-decoration: none !important;
+/* Site title / Logo */
+.main-menu .logo {
+  max-height: none !important;
+  max-width: none !important;
+  width: 225px !important;
+  height: auto !important;
 }
-
-.dark .main-menu > a { color: var(--gold-light) !important; }
 
 /* Nav links */
 .main-menu nav { gap: 0 !important; }
