@@ -334,16 +334,41 @@ a[href*="/tags/"] span[class*="rounded"] {
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
-  .main-menu { padding: 0 12px !important; }
-  .main-menu > a { font-size: 12px !important; letter-spacing: 1.5px; }
-  .main-menu nav a,
-  .main-menu nav button { padding: 14px 8px !important; font-size: 10px !important; }
+  /* Header: hide desktop nav, show hamburger */
+  .main-menu {
+    padding: 0 12px !important;
+  }
 
+  .main-menu > * {
+    padding: 0 10px;
+  }
+
+  .main-menu > a {
+    font-size: 12px !important;
+    letter-spacing: 1.5px;
+  }
+
+  /* Hide desktop nav links on mobile */
+  .main-menu nav {
+    display: none !important;
+  }
+
+  /* Mobile menu fullscreen overlay */
   .menuhide {
     position: static !important;
     box-shadow: none !important;
     border: none !important;
     background: transparent !important;
     padding-left: 16px !important;
+  }
+
+  /* Make mobile menu toggle visible */
+  label[for="mobile-menu-toggle"] {
+    display: flex !important;
+  }
+
+  /* Mobile menu content */
+  .peer-checked\:visible nav a {
+    font-size: 1.2rem !important;
   }
 }
