@@ -348,38 +348,32 @@ a[href*="/tags/"] span[class*="rounded"] {
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
-  /* Header: hide desktop nav, show hamburger */
-  .main-menu {
-    padding: 0 12px !important;
-  }
+  .main-menu { padding: 0 12px !important; }
+  .main-menu > * { padding: 0 10px; }
+  .main-menu > a { font-size: 12px !important; letter-spacing: 1.5px; }
 
-  .main-menu > * {
-    padding: 0 10px;
-  }
-
-  .main-menu > a {
-    font-size: 12px !important;
-    letter-spacing: 1.5px;
-  }
-
-  /* Desktop nav already hidden on mobile by Tailwind's hidden md:flex */
-
-  /* Mobile menu fullscreen overlay */
-  .menuhide {
-    position: static !important;
-    box-shadow: none !important;
-    border: none !important;
-    background: transparent !important;
-    padding-left: 16px !important;
-  }
-
-  /* Make mobile menu toggle visible */
-  label[for="mobile-menu-toggle"] {
+  /* Hamburger icon */
+  .hamburger {
     display: flex !important;
+    padding: 8px;
   }
 
-  /* Mobile menu content */
-  .peer-checked\:visible nav a {
-    font-size: 1.2rem !important;
+  /* Mobile menu sidebar */
+  .mobile-menu-sidebar {
+    background-color: #faf8f3 !important;
+  }
+
+  .dark .mobile-menu-sidebar {
+    background-color: #1a1816 !important;
+  }
+
+  /* Menu item hover */
+  .mobile-menu-item a:hover {
+    color: var(--gold) !important;
+  }
+
+  /* Dropdown chevron */
+  .mobile-menu-sidebar .peer\/full + div .border-s-2 {
+    border-color: var(--gold-border) !important;
   }
 }
