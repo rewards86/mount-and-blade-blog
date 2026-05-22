@@ -10,7 +10,7 @@ title = "Mount and Blade Game"
   dateFormat = "2 January 2006"
   description = "The best Mount and Blade guides, mods, and technical support for Bannerlord and Warband."
 
-  logo = ""
+  logo = "logo.png"
   logoAlt = "Mount and Blade Game"
 
 [params.author]

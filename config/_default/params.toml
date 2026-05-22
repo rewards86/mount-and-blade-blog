@@ -10,7 +10,7 @@ enableStructuredBreadcrumbs = true
 mainSections = ["posts"]
 
 disableImageOptimization = true
-disableTextInHeader = false
+disableTextInHeader = true
 
 defaultBackgroundImage = ""
 defaultFeaturedImage = ""
