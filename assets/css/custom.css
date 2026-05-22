@@ -244,6 +244,20 @@ article.article-link--card a:hover span.rounded-md {
 }
 
 /* ===== Article / single post page ===== */
+.article-content.max-w-prose {
+  max-width: 100% !important;
+}
+
+/* Remove max-w-fit constraint on article wrapper */
+.min-w-0.min-h-0.max-w-fit {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+#single_header.max-w-prose,
+footer.pt-8.max-w-prose {
+  max-width: 900px !important;
+}
 .prose {
   font-family: 'Source Serif 4', serif !important;
 }
