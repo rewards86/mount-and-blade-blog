@@ -1,7 +1,10 @@
 ---
 title: "Smithing Guide for Bannerlord: Making Money Quick"
-date: 2023-01-17T14:45:00
-lastmod: 2023-01-19T04:43:32
+date: 2023-01-17T19:45:00Z
+lastmod: 2026-05-22T18:39:35
+tags:
+  - Guide
+  - Bannerlord
 slug: "smithing-guide-bannerlord-making-money"
 aliases:
   - /2023/01/smithing-guide-bannerlord-making-money.html
