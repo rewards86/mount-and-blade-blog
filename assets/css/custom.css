@@ -328,6 +328,35 @@ a[href*="/tags/"] span[class*="rounded"] {
   background: var(--gold-bg) !important;
 }
 
+/* ===== Share buttons — native brand colors ===== */
+section.pt-4.text-xl a {
+  background-color: #555 !important;
+  color: #fff !important;
+}
+
+section.pt-4.text-xl a[href*="facebook"] {
+  background-color: #1877F2 !important;
+}
+
+section.pt-4.text-xl a[href*="twitter"],
+section.pt-4.text-xl a[href*="x.com"] {
+  background-color: #000 !important;
+}
+
+.dark section.pt-4.text-xl a[href*="twitter"],
+.dark section.pt-4.text-xl a[href*="x.com"] {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+section.pt-4.text-xl a[href*="reddit"] {
+  background-color: #FF4500 !important;
+}
+
+section.pt-4.text-xl a[href*="mailto"] {
+  background-color: #EA4335 !important;
+}
+
 /* ===== Scroll-to-top button ===== */
 #scroll-to-top a {
   background: rgba(201,168,76,0.15) !important;
