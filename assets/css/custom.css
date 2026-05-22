@@ -362,10 +362,7 @@ a[href*="/tags/"] span[class*="rounded"] {
     letter-spacing: 1.5px;
   }
 
-  /* Hide desktop nav links on mobile */
-  .main-menu nav {
-    display: none !important;
-  }
+  /* Desktop nav already hidden on mobile by Tailwind's hidden md:flex */
 
   /* Mobile menu fullscreen overlay */
   .menuhide {
